@@ -1,7 +1,7 @@
 import { CarFront, MapPin, Phone, Route, WalletCards } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Reveal } from "@/components/ui/Reveal";
-import { paymentCards, site } from "@/lib/site-data";
+import { site } from "@/lib/site-data";
 
 export function Contacts() {
   return (
@@ -57,7 +57,7 @@ export function Contacts() {
 
           <Reveal delay={0.08}>
             <div className="overflow-hidden rounded-card border border-graphite-200 bg-white shadow-panel">
-              <div className="relative min-h-[420px] bg-graphite-950">
+              <div className="relative min-h-[520px] bg-graphite-950">
                 <iframe
                   src={site.yandexMapEmbedUrl}
                   title="Яндекс Карта: Овражная ул., 24, стр. 8, микрорайон Сходня, Химки"
@@ -66,19 +66,6 @@ export function Contacts() {
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
                 />
-                <div className="pointer-events-none absolute left-4 right-4 top-4 rounded-card border border-white/20 bg-graphite-950/82 p-4 text-white shadow-soft backdrop-blur-md sm:left-6 sm:right-auto sm:max-w-md">
-                  <p className="text-xs font-extrabold uppercase text-cyanbrand-300">Яндекс Карты</p>
-                  <h3 className="mt-2 text-xl font-extrabold">{site.address}</h3>
-                </div>
-              </div>
-              <div className="grid gap-3 bg-graphite-950 p-4 sm:grid-cols-3 sm:p-6">
-                {paymentCards.map((card) => (
-                  <div key={card.title} className="rounded-card border border-white/10 bg-white/[0.06] p-4">
-                    <card.icon className="h-5 w-5 text-cyanbrand-300" />
-                    <p className="mt-3 font-extrabold">{card.title}</p>
-                    <p className="mt-1 text-sm leading-6 text-white/64">{card.text}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </Reveal>
