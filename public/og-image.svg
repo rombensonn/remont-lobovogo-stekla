@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A1015"/>
+  <circle cx="220" cy="120" r="210" fill="#27C8EE" fill-opacity="0.22"/>
+  <circle cx="1010" cy="40" r="260" fill="#8DA3AF" fill-opacity="0.14"/>
+  <path d="M235 250C285 162 917 162 965 250L1030 445C990 497 214 497 170 445L235 250Z" fill="url(#glass)" stroke="white" stroke-opacity="0.28" stroke-width="3"/>
+  <path d="M265 286C392 238 778 232 934 286" stroke="#6BE7FF" stroke-opacity="0.58" stroke-width="4"/>
+  <path d="M218 392C398 430 782 431 982 392" stroke="white" stroke-opacity="0.28" stroke-width="3"/>
+  <circle cx="770" cy="315" r="10" fill="white"/>
+  <circle cx="770" cy="315" r="35" stroke="#6BE7FF" stroke-opacity="0.32" stroke-width="8"/>
+  <text x="80" y="120" fill="#6BE7FF" font-family="Arial, sans-serif" font-size="30" font-weight="700">5,0 · 62 оценки · 43 отзыва</text>
+  <text x="80" y="545" fill="white" font-family="Arial, sans-serif" font-size="64" font-weight="800">Ремонт и тонировка автостёкол</text>
+  <text x="82" y="590" fill="#AFC3CC" font-family="Arial, sans-serif" font-size="30">ремонт лобового стекла · тонировка · бронь</text>
+  <defs>
+    <linearGradient id="glass" x1="200" y1="180" x2="1000" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.22"/>
+      <stop offset="0.45" stop-color="#27C8EE" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,14 @@
+.next/
+out/
+node_modules/
+.env*.local
+.DS_Store
+.playwright-cli/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+storage/leads.csv
+storage/rate-limit/*.json
+storage/uploads/*
+!storage/uploads/.gitkeep
+!storage/rate-limit/.gitkeep

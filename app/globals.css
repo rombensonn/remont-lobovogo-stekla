@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(141, 163, 175, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(141, 163, 175, 0.07) 1px, transparent 1px),
+    #f4f7f8;
+  background-size: 48px 48px;
+  color: #0a1015;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::selection {
+  background: rgba(39, 200, 238, 0.28);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-label {
+  @apply inline-flex min-h-8 items-center gap-2 rounded-card border border-graphite-200 bg-white px-3 text-xs font-extrabold uppercase text-graphite-700 shadow-sm;
+}
+
+.section-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #27c8ee;
+  box-shadow: 0 0 0 3px rgba(39, 200, 238, 0.15);
+}
+
+.dark-section-label {
+  @apply border-white/20 bg-white/10 text-white/80;
+}
+
+.atelier-panel {
+  @apply rounded-card border border-graphite-200 bg-white shadow-panel;
+}
+
+.atelier-panel-dark {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset;
+}
+
+.technical-grid {
+  background-image:
+    linear-gradient(rgba(141, 163, 175, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(141, 163, 175, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyanbrand-400;
+}
+
+.glass-scene {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(39, 200, 238, 0.045)),
+    #0a1015;
+  background-size: 34px 34px, 34px 34px, auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 24px 90px rgba(0, 0, 0, 0.28);
+}
+
+.glass-scene::before,
+.glass-scene::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.glass-scene::before {
+  inset: 17% 8% 18% 8%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 46% 46% 18% 18% / 22% 22% 12% 12%;
+  transform: perspective(820px) rotateX(17deg) rotateZ(-3deg);
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.32), transparent 24%),
+    linear-gradient(180deg, rgba(107, 231, 255, 0.14), rgba(255, 255, 255, 0.02));
+  box-shadow:
+    inset 0 0 52px rgba(107, 231, 255, 0.18),
+    0 24px 84px rgba(39, 200, 238, 0.2);
+}
+
+.glass-scene::after {
+  width: 140%;
+  height: 1px;
+  left: -20%;
+  top: 58%;
+  transform: rotate(-12deg);
+  background: linear-gradient(90deg, transparent, rgba(245, 184, 75, 0.88), transparent);
+  opacity: 0.84;
+}
+
+.glass-line {
+  position: absolute;
+  height: 1px;
+  width: 78%;
+  left: 11%;
+  background: linear-gradient(90deg, transparent, rgba(107, 231, 255, 0.78), transparent);
+}
+
+.glass-line-one {
+  top: 38%;
+  transform: rotate(-5deg);
+}
+
+.glass-line-two {
+  top: 67%;
+  transform: rotate(4deg);
+  opacity: 0.62;
+}
+
+.glass-chip {
+  position: absolute;
+  right: 24%;
+  top: 43%;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 0 0 9px rgba(107, 231, 255, 0.08),
+    0 0 0 17px rgba(245, 184, 75, 0.06),
+    0 0 26px rgba(107, 231, 255, 0.68);
+}
+
+.glass-depth {
+  position: absolute;
+  inset: auto 8% 6% 8%;
+  height: 98px;
+  border-radius: 8px;
+  background: radial-gradient(ellipse at center, rgba(39, 200, 238, 0.18), transparent 68%);
+  filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .glass-scene::after {
+    animation: glassSweep 7s ease-in-out infinite;
+  }
+}
+
+@keyframes glassSweep {
+  0%,
+  100% {
+    transform: translateX(-8%) rotate(-12deg);
+    opacity: 0.34;
+  }
+  48% {
+    transform: translateX(18%) rotate(-12deg);
+    opacity: 0.74;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  body {
+    padding-bottom: calc(76px + var(--safe-bottom));
+  }
+
+  .glass-scene {
+    min-height: 390px;
+  }
+}

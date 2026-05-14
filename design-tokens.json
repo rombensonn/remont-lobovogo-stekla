@@ -1,0 +1,144 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "Glass Atelier",
+    "description": "Design tokens for a Russian automotive glass repair, tinting, detinting, and protection landing page.",
+    "version": "1.0.0"
+  },
+  "color": {
+    "graphite": {
+      "950": { "value": "#101214" },
+      "900": { "value": "#171A1D" },
+      "800": { "value": "#22272B" },
+      "700": { "value": "#30363B" },
+      "600": { "value": "#46505A" }
+    },
+    "porcelain": {
+      "50": { "value": "#FAFAF8" },
+      "100": { "value": "#F3F1ED" },
+      "200": { "value": "#E7E2DA" },
+      "300": { "value": "#D5CEC3" }
+    },
+    "cyan": {
+      "500": { "value": "#20C7D8" },
+      "600": { "value": "#12AFC2" },
+      "700": { "value": "#0D8797" },
+      "soft": { "value": "#DDF8FB" }
+    },
+    "amber": {
+      "500": { "value": "#C98A2E" },
+      "600": { "value": "#A96E1F" },
+      "soft": { "value": "#F6E4C7" }
+    },
+    "status": {
+      "success": { "value": "#2E7D5B" },
+      "danger": { "value": "#B94A48" },
+      "warning": { "value": "#A96E1F" }
+    },
+    "surface": {
+      "page": { "value": "{color.porcelain.50}" },
+      "band": { "value": "{color.porcelain.100}" },
+      "inverse": { "value": "{color.graphite.950}" },
+      "glass": { "value": "rgba(250, 250, 248, 0.72)" },
+      "glassDark": { "value": "rgba(16, 18, 20, 0.78)" }
+    },
+    "text": {
+      "primary": { "value": "{color.graphite.950}" },
+      "secondary": { "value": "{color.graphite.700}" },
+      "muted": { "value": "{color.graphite.600}" },
+      "inverse": { "value": "{color.porcelain.50}" },
+      "accent": { "value": "{color.cyan.700}" }
+    },
+    "line": {
+      "default": { "value": "rgba(16, 18, 20, 0.16)" },
+      "strong": { "value": "rgba(16, 18, 20, 0.34)" },
+      "inverse": { "value": "rgba(250, 250, 248, 0.22)" },
+      "cyan": { "value": "rgba(32, 199, 216, 0.48)" },
+      "measure": { "value": "rgba(16, 18, 20, 0.12)" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": { "value": "Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" },
+      "mono": { "value": "JetBrains Mono, SFMono-Regular, Consolas, monospace" }
+    },
+    "fontSize": {
+      "xs": { "value": "0.75rem" },
+      "sm": { "value": "0.875rem" },
+      "base": { "value": "1rem" },
+      "lg": { "value": "1.125rem" },
+      "xl": { "value": "1.375rem" },
+      "2xl": { "value": "1.75rem" },
+      "3xl": { "value": "2.25rem" },
+      "4xl": { "value": "3rem" }
+    },
+    "lineHeight": {
+      "tight": { "value": "1.12" },
+      "heading": { "value": "1.18" },
+      "body": { "value": "1.55" },
+      "ui": { "value": "1.25" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400" },
+      "medium": { "value": "500" },
+      "semibold": { "value": "600" },
+      "bold": { "value": "700" }
+    },
+    "letterSpacing": {
+      "default": { "value": "0" },
+      "label": { "value": "0.04em" }
+    }
+  },
+  "space": {
+    "0": { "value": "0" },
+    "1": { "value": "0.25rem" },
+    "2": { "value": "0.5rem" },
+    "3": { "value": "0.75rem" },
+    "4": { "value": "1rem" },
+    "5": { "value": "1.25rem" },
+    "6": { "value": "1.5rem" },
+    "8": { "value": "2rem" },
+    "10": { "value": "2.5rem" },
+    "12": { "value": "3rem" },
+    "16": { "value": "4rem" },
+    "20": { "value": "5rem" },
+    "24": { "value": "6rem" }
+  },
+  "radius": {
+    "none": { "value": "0" },
+    "sm": { "value": "4px" },
+    "md": { "value": "8px" },
+    "lg": { "value": "8px" },
+    "pill": { "value": "999px" }
+  },
+  "borderWidth": {
+    "hairline": { "value": "1px" },
+    "focus": { "value": "2px" }
+  },
+  "shadow": {
+    "none": { "value": "none" },
+    "atelier": { "value": "0 18px 48px rgba(16, 18, 20, 0.12)" },
+    "lift": { "value": "0 10px 28px rgba(16, 18, 20, 0.10)" }
+  },
+  "blur": {
+    "glass": { "value": "18px" },
+    "soft": { "value": "10px" }
+  },
+  "layout": {
+    "contentMax": { "value": "1180px" },
+    "mobileColumns": { "value": "4" },
+    "tabletColumns": { "value": "8" },
+    "desktopColumns": { "value": "12" },
+    "touchTarget": { "value": "44px" }
+  },
+  "motion": {
+    "durationFast": { "value": "150ms" },
+    "durationBase": { "value": "220ms" },
+    "easing": { "value": "cubic-bezier(0.2, 0, 0, 1)" }
+  },
+  "focus": {
+    "ringColor": { "value": "{color.cyan.500}" },
+    "ringWidth": { "value": "{borderWidth.focus}" },
+    "ringOffset": { "value": "3px" }
+  }
+}
