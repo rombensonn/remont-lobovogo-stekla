@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import { publicPath, site } from "@/lib/site-data";
+import { site } from "@/lib/site-data";
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Сколы, трещины, тонировка и бронь автостёкол. Предварительный расчёт по фото, согласование цены до начала работ.",
     images: [
       {
-        url: publicPath("/og-image.svg"),
+        url: `${site.baseUrl.replace(/\/$/, "")}/og-image.svg`,
         width: 1200,
         height: 630,
         alt: "Ремонт и тонировка автостёкол",
